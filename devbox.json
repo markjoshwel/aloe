@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "bun@latest",
+    "libwebp@latest",
+    "woff2@latest",
+    "ffmpeg@latest"
+  ]
+}

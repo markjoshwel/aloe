@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.3.5"
+  },
+  "scripts": {
+    "proto": "tailwindcss -i ./src/assets/css/prototyping.css -o ./public/assets/css/prototyping.css --watch"
+  }
+}

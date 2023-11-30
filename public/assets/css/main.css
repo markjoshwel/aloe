@@ -1,0 +1,23 @@
+@import url(preflight.css);
+@import url(tokens.css);
+@import url(colors.module.css);
+@import url(typography.module.css);
+@import url(theme.dark.css);
+@import url(prototyping.css);
+
+@font-face {
+    font-family: 'DT Nightingale';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Nightingale-Regular.otf') format('opentype'),
+         url('/assets/woff2/nightingale/DTNightingale-Light.woff2') format('woff2');
+}
+
+.font-nightingale {
+    font-family: 'DT Nightingale', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--md-sys-color-on-background);
+}
