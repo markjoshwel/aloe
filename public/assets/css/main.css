@@ -1,23 +1,136 @@
 @import url(preflight.css);
 @import url(tokens.css);
 @import url(colors.module.css);
-@import url(typography.module.css);
 @import url(theme.dark.css);
-@import url(prototyping.css);
+
+/* general styling */
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 
 @font-face {
-    font-family: 'DT Nightingale';
+  font-family: "DT Nightingale";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/woff2/nightingale/DTNightingale-Light.otf")
+      format("opentype"),
+    url("/assets/woff2/nightingale/DTNightingale-Light.woff2") format("woff2");
+}
+
+@supports not (font-variation-settings: normal) {
+  @font-face {
+    font-family: "BDO Grotesk";
     font-style: normal;
-    font-weight: 400;
     font-display: swap;
-    src: url('/fonts/Nightingale-Regular.otf') format('opentype'),
-         url('/assets/woff2/nightingale/DTNightingale-Light.woff2') format('woff2');
+    src: url("/assets/woff2/bdogrotesk/BDOGrotesk-Regular.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "BDO Grotesk";
+    font-style: oblique;
+    font-display: swap;
+    src: url("/assets/woff2/bdogrotesk/BDOGrotesk-DemiBold.otf")
+      format("opentype");
+  }
 }
 
-.font-nightingale {
-    font-family: 'DT Nightingale', sans-serif;
+@supports (font-variation-settings: normal) {
+  @font-face {
+    font-family: "BDO Grotesk";
+    font-display: swap;
+    src: url("/assets/woff2/bdogrotesk/BDOGrotesk-VF.woff2")
+        format("woff2 supports variations"),
+      url("/assets/woff2/bdogrotesk/BDOGrotesk-VF.woff2")
+        format("woff2-variations");
+  }
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: var(--md-sys-color-on-background);
+  font-family: "BDO Grotesk", sans-serif;
+  font-size: 1.5rem;
+}
+
+h1,
+.font-nightingale {
+  font-family: "DT Nightingale", serif;
+}
+
+.normal {
+  font-family: "BDO Grotesk", sans-serif;
+}
+
+/* navigation styling */
+
+.uninav {
+  position: fixed;
+  z-index: 10;
+  padding: 2.5rem;
+
+  min-width: 100vw;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  justify-self: end;
+  align-self: flex-start;
+  text-align: end;
+  
+  mix-blend-mode: difference;
+  pointer-events: none;  /* allow to click thorugh overlay */
+}
+
+.uninav a {
+  pointer-events: auto;  /* allow clicking the nav items though */
+}
+
+/* hero section styling */
+
+.hero-common {
+  min-height: 100vh;
+  min-height: 100svh;
+  max-height: 100vh;
+  max-height: 100svh;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.hero {
+  background-color: #231305;
+
+  min-height: 100vh;
+  min-height: 100svh;
+  max-height: 100vh;
+  max-height: 100svh;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+
+  background-image: url("/assets/webp/hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.hero-background {
+  /* position: fixed; */
+}
+
+.hero-foreground {
+  position: fixed;
+  z-index: 5;
+}
+
+.name {
+  line-height: 0.96;
 }
