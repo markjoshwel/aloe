@@ -54,7 +54,7 @@ h3,
 h4,
 h5,
 h6,
-p {
+p, .normal {
   color: var(--md-sys-color-on-background);
   font-family: "BDO Grotesk", sans-serif;
   font-size: 1.5rem;
@@ -63,10 +63,6 @@ p {
 h1,
 .font-nightingale {
   font-family: "DT Nightingale", serif;
-}
-
-.normal {
-  font-family: "BDO Grotesk", sans-serif;
 }
 
 /* navigation styling */
@@ -105,32 +101,94 @@ h1,
 }
 
 .hero {
-  background-color: #231305;
-
-  min-height: 100vh;
-  min-height: 100svh;
-  max-height: 100vh;
-  max-height: 100svh;
-  min-width: 100vw;
-  max-width: 100vw;
-  overflow: hidden;
-
-  background-image: url("/assets/webp/hero.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-.hero-background {
-  /* position: fixed; */
+  /* background-color: #231305; */
+  z-index: -4;
 }
 
 .hero-foreground {
   position: fixed;
-  z-index: 5;
+  z-index: 0;
+}
+
+.hero-middleground {
+  position: fixed;
+  z-index: -1;
+}
+
+.hero-middleground .hand {
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo-heart-path {
+  opacity: 80%;
+  mix-blend-mode: light;
+}
+
+#logo-hand-path {
+  opacity: 80%;
+  mix-blend-mode: light;
+}
+
+.hero-background {
+  position: fixed;
+  z-index: -3;
+  background-image: url("/assets/webp/hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#description {
+  position: relative;
+  width: 32rem;
+  aspect-ratio: 1/1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  animation: spin 60s linear infinite;
+  mix-blend-mode: difference;
+}
+
+#description-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+#description-text span {
+  position: absolute;
+  left: 50%;
+  transform-origin: 0 16rem;
+  font-size: 2rem;
 }
 
 .name {
   line-height: 0.96;
 }
+
+/* about section styling */
+
+/* works section styling */
+
+/* track record styling */
