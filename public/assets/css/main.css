@@ -15,9 +15,9 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/woff2/nightingale/DTNightingale-Light.otf")
+  src: url("./assets/otf/nightingale/DTNightingale-Light.otf")
       format("opentype"),
-    url("assets/woff2/nightingale/DTNightingale-Light.woff2") format("woff2");
+    url("./assets/woff2/nightingale/DTNightingale-Light.woff2") format("woff2");
 }
 
 @supports not (font-variation-settings: normal) {
@@ -25,14 +25,14 @@ body {
     font-family: "BDO Grotesk";
     font-style: normal;
     font-display: swap;
-    src: url("assets/woff2/bdogrotesk/BDOGrotesk-Regular.otf")
+    src: url("./assets/otf/bdogrotesk/BDOGrotesk-Regular.otf")
       format("opentype");
   }
   @font-face {
     font-family: "BDO Grotesk";
     font-style: oblique;
     font-display: swap;
-    src: url("assets/woff2/bdogrotesk/BDOGrotesk-DemiBold.otf")
+    src: url("./assets/otf/bdogrotesk/BDOGrotesk-DemiBold.otf")
       format("opentype");
   }
 }
@@ -41,9 +41,9 @@ body {
   @font-face {
     font-family: "BDO Grotesk";
     font-display: swap;
-    src: url("assets/woff2/bdogrotesk/BDOGrotesk-VF.woff2")
+    src: url("./assets/woff2/bdogrotesk/BDOGrotesk-VF.woff2")
         format("woff2 supports variations"),
-      url("assets/woff2/bdogrotesk/BDOGrotesk-VF.woff2")
+      url("./assets/woff2/bdogrotesk/BDOGrotesk-VF.woff2")
         format("woff2-variations");
   }
 }
@@ -163,7 +163,7 @@ h1,
 #hero-background {
   position: fixed;
   z-index: -3;
-  background-image: url("assets/webp/hero.webp");
+  background-image: url("./assets/webp/hero.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
