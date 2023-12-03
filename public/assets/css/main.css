@@ -110,7 +110,7 @@ h2 {
 }
 
 .uninav a {
-  pointer-events: auto; /* allow clicking the nav items though */
+  pointer-events: initial; /* allow clicking the nav items though */
 }
 
 /* hero section styling */
@@ -178,12 +178,11 @@ h2 {
 
 #logo-heart-path {
   opacity: 80%;
-  mix-blend-mode: light;
+  mix-blend-mode: multiply;
 }
 
 #logo-hand-path {
-  opacity: 80%;
-  /* mix-blend-mode: light; */
+  opacity: 90%;
 }
 
 #hero-background {
