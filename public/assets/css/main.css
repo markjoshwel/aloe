@@ -15,8 +15,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../otf/nightingale/DTNightingale-Light.otf")
-      format("opentype"),
+  src: url("../otf/nightingale/DTNightingale-Light.otf") format("opentype"),
     url("../woff2/nightingale/DTNightingale-Light.woff2") format("woff2");
 }
 
@@ -25,15 +24,13 @@ body {
     font-family: "BDO Grotesk";
     font-style: normal;
     font-display: swap;
-    src: url("../otf/bdogrotesk/BDOGrotesk-Regular.otf")
-      format("opentype");
+    src: url("../otf/bdogrotesk/BDOGrotesk-Regular.otf") format("opentype");
   }
   @font-face {
     font-family: "BDO Grotesk";
     font-style: oblique;
     font-display: swap;
-    src: url("../otf/bdogrotesk/BDOGrotesk-DemiBold.otf")
-      format("opentype");
+    src: url("../otf/bdogrotesk/BDOGrotesk-DemiBold.otf") format("opentype");
   }
 }
 
@@ -43,8 +40,7 @@ body {
     font-display: swap;
     src: url("../woff2/bdogrotesk/BDOGrotesk-VF.woff2")
         format("woff2 supports variations"),
-      url("../woff2/bdogrotesk/BDOGrotesk-VF.woff2")
-        format("woff2-variations");
+      url("../woff2/bdogrotesk/BDOGrotesk-VF.woff2") format("woff2-variations");
   }
 }
 
@@ -54,38 +50,67 @@ h3,
 h4,
 h5,
 h6,
-p, .normal {
+p,
+.normal {
   color: var(--md-sys-color-on-background);
   font-family: "BDO Grotesk", sans-serif;
   font-size: 1.5rem;
 }
 
 h1,
+h2,
 .font-nightingale {
   font-family: "DT Nightingale", serif;
+}
+
+h2 {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 4.5rem;
+  }
 }
 
 /* navigation styling */
 
 .uninav {
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 100;
-  padding: 2.5rem;
-
   min-width: 100vw;
-  min-height: 100vh;
-  min-height: 100svh;
-
-  justify-self: end;
-  align-self: flex-start;
+  height: 0px;
   text-align: end;
-  
   mix-blend-mode: difference;
-  pointer-events: none;  /* allow to click thorugh overlay */
+  pointer-events: none; /* allow to click thorugh overlay */
+}
+
+.uninav nav {
+  padding: 2rem;
 }
 
 .uninav a {
-  pointer-events: auto;  /* allow clicking the nav items though */
+  pointer-events: auto; /* allow clicking the nav items though */
 }
 
 /* hero section styling */
@@ -97,6 +122,7 @@ h1,
   max-height: 100svh;
   min-width: 100vw;
   max-width: 100vw;
+  overflow: hidden;
 }
 
 .hero {
@@ -166,8 +192,8 @@ h1,
   background-image: url("../webp/hero.webp");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed; */
 
   display: flex;
   justify-content: center;
@@ -187,18 +213,6 @@ h1,
   animation: spin 60s linear infinite;
   mix-blend-mode: difference;
 }
-
-/* @media (max-width: 768px) {
-  #description {
-    width: 24rem;
-  }
-}
-
-@media (max-width: 400px) {
-  #description {
-    width: 20rem;
-  }
-} */
 
 #description-text {
   position: absolute;
@@ -222,21 +236,7 @@ h1,
   font-size: 2rem;
 }
 
-/* @media (max-width: 768px) {
-  #description-text span {
-    transform-origin: 0 12rem;
-  }
-}
-
-@media (max-width: 400px) {
-  #description-text span {
-    transform-origin: 0 10rem;
-    font-size: 1.2rem;
-  }
-} */
-
 /* about section styling */
-
 
 #about-intro-text {
   z-index: 10;
@@ -251,35 +251,6 @@ h1,
   justify-content: center;
 }
 
-#about-intro h2 {
-  font-size: 6rem;
-  line-height: 1;
-}
-
-@media (max-width: 1024px) {
-  #about-intro h2 {
-    font-size: 5.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #about-intro h2 {
-    font-size: 5rem;
-  }
-}
-
-@media (max-width: 650px) {
-  #about-intro h2 {
-    font-size: 4rem;
-  }
-}
-
-@media (max-width: 500px) {
-  #about-intro h2 {
-    font-size: 4.5rem;
-  }
-}
-
 @media (max-width: 400px) {
   #about-intro h2 {
     font-size: 4rem;
@@ -290,7 +261,9 @@ h1,
   padding: 2rem;
 }
 
-/* #about-intro-polaroids {} */
+#about-intro-polaroids {
+  overflow: hidden;
+}
 
 .polaroid {
   width: 50%;
@@ -302,7 +275,6 @@ h1,
 
 #polaroid-bahl {
   transform: translate(110%, -25%) rotate(-17deg);
-
 }
 
 #about-body > * {
@@ -313,14 +285,58 @@ h1,
 
 #works {
   /* border: 2px green solid; */
+  padding: 2rem;
   min-height: 100vh;
+  margin-top: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+#works > * {
+  min-width: 100%;
+}
+
+#works-intro {
+  padding-bottom: 10rem;
+}
+
+#works-container section {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-color: var(--md-sys-color-outline);
+  border-top-width: 2px;
+}
+
+#works-container section:last-child {
+  border-color: var(--md-sys-color-outline);
+  border-bottom-width: 2px;
+}
+
+.work-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 800px) {
+  .work-title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+/* .work-writeup {} */
+
+/* .work-images {} */
 
 /* track record section styling */
 
 #record {
   /* border: 2px purple solid; */
   min-height: 100vh;
+  padding: 2rem;
 }
 
 /* contact section styling */
@@ -328,4 +344,10 @@ h1,
 #contact {
   /* border: 2px cyan solid; */
   min-height: 100vh;
+  padding: 2rem;
+}
+
+/* footer styling */
+footer {
+  padding: 2rem;
 }

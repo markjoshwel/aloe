@@ -10,6 +10,7 @@
   </head>
   <body class="background">
     <div class="uninav">
+      <!-- <div> -->
       <nav>
         <ul>
           <li>
@@ -26,6 +27,7 @@
           </li>
         </ul>
       </nav>
+      <!-- </div> -->
     </div>
 
     <header class="hero-common hero">
@@ -78,11 +80,11 @@
       </div>
     </header>
 
-    <main class="background min-w-screen">
+    <main class="background">
       <section id="about">
         <div id="about-intro">
           <div id="about-intro-text">
-            <h2 class="font-nightingale">
+            <h2>
               where
               <span class="primary-text">krystall</span>
               meets
@@ -142,15 +144,46 @@
       </section>
 
       <section id="works">
-        <p>works</p>
-        <p>works</p>
-        <p>works</p>
+        <h2 id="works-intro">
+          selected works<br />
+          <span class="on-primary-container-text"> 2023 </span>
+        </h2>
+
+        <div id="works-container">
+          <section class="work">
+            <h3 class="work-title">sandplus</h3>
+            <p class="work-writeup">
+              Figma wireframe project for a student-made application project.
+            </p>
+            <div class="work-images">
+              <!-- ... -->
+            </div>
+          </section>
+
+          <section class="work">
+            <h3 class="work-title">mStudent 5</h3>
+            <p class="work-writeup">
+              Figma wireframe project for the revamp of Ngee Ann Polytechnics'
+              student-facing portal.
+            </p>
+            <div class="work-images">
+              <!-- ... -->
+            </div>
+          </section>
+        </div>
       </section>
 
       <section id="record">
-        <p>record</p>
-        <p>record</p>
-        <p>record</p>
+        <div class="record-intro">
+          <h2>
+            a<br />
+            <span class="primary-text">crystal-<br />clear</span><br />
+            track<br />
+            record
+          </h2>
+          <p>and don't just take our word for it.</p>
+        </div>
+        <div class="record-testimonials"></div>
       </section>
 
       <section id="contact">
@@ -164,7 +197,6 @@
       <p>footer</p>
     </footer>
 
-    <script src="assets/js/rotate.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script>
       const lenis = new Lenis();
@@ -175,6 +207,25 @@
       }
 
       requestAnimationFrame(raf);
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      const text = document.querySelector("#description-text p");
+      text.innerHTML = text.innerText
+        .split("")
+        .map(
+          (char, i) =>
+            `<span style="transform: rotate(${i * 7.4}deg);">${char}</span>`
+        )
+        .join("");
     </script>
   </body>
 </html>
