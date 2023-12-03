@@ -114,9 +114,15 @@ h1,
   /* logo */
   /* color: #f99229; */
   line-height: 0.96;
-  font-size: 9rem;
+  font-size: 13rem;
   place-self: end;
   padding: 2rem 2rem 1.5rem 2rem;
+}
+
+@media (max-width: 1024px) {
+  #hero-foreground h1 {
+    font-size: 9rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -231,6 +237,75 @@ h1,
 
 /* about section styling */
 
+
+#about-intro-text {
+  z-index: 10;
+  padding: 2rem;
+}
+
+#about-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about-intro h2 {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  #about-intro h2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #about-intro h2 {
+    font-size: 4rem;
+  }
+}
+
+#about-body {
+  padding: 2rem;
+}
+
+/* #about-intro-polaroids {} */
+
+.polaroid {
+  width: 50%;
+}
+
+#polaroid-krystall {
+  transform: translate(-5%, 20%) rotate(13deg);
+}
+
+#polaroid-bahl {
+  transform: translate(110%, -25%) rotate(-17deg);
+
+}
+
+#about-body > * {
+  margin-top: 2rem;
+}
+
 /* works section styling */
 
-/* track record styling */
+#works {
+  /* border: 2px green solid; */
+  min-height: 100vh;
+}
+
+/* track record section styling */
+
+#record {
+  /* border: 2px purple solid; */
+  min-height: 100vh;
+}
+
+/* contact section styling */
+
+#contact {
+  /* border: 2px cyan solid; */
+  min-height: 100vh;
+}

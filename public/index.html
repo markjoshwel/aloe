@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Krystall & Bahl</title>
 
-    <!-- <link rel="stylesheet" href="assets/css/prototyping.css" /> -->
+    <link rel="stylesheet" href="assets/css/prototyping.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="background">
-    <!-- <div class="uninav">
+    <div class="uninav">
       <nav class="sticky">
         <ul>
           <li>
@@ -26,7 +26,7 @@
           </li>
         </ul>
       </nav>
-    </div> -->
+    </div>
 
     <header class="hero-common hero">
       <div class="hero-common primary-text" id="hero-foreground">
@@ -78,34 +78,103 @@
       </div>
     </header>
 
-    <main class="background">
+    <main class="background min-w-screen">
       <section id="about">
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
+        <div id="about-intro">
+          <div id="about-intro-text" class="sticky top-0">
+            <h2 class="font-nightingale">
+              where
+              <span class="primary-text">krystall</span>
+              meets
+              <span class="tertiary-text">bahl</span>.
+            </h2>
+          </div>
+          <div id="about-intro-polaroids">
+            <img
+              class="polaroid"
+              id="polaroid-krystall"
+              src="/assets/webp/krystall.webp"
+              alt="polaroid photo of krystall methuselah (charlene)"
+            />
+            <img
+              class="polaroid"
+              id="polaroid-bahl"
+              src="/assets/webp/bahl.webp"
+              alt="polaroid photo of krystall methuselah (charlene)"
+            />
+          </div>
+        </div>
+
+        <div id="about-body" class="grid justify-center">
+          <div>
+            <p>krystall & bahl is a collective of two creatives,</p>
+            <p style="text-align: left" class="primary-text">
+              krystall methuselah
+            </p>
+            <p style="text-align: center">and</p>
+            <p style="text-align: end" class="tertiary-text">bahl lin.</p>
+          </div>
+
+          <p>
+            krystal & bahl is local (singaporean)<br />
+            and international (remote).
+          </p>
+
+          <p>
+            <!-- dawg there has to be a better way to do this 😭 -->
+            we do &nbsp&nbsp&nbsp&nbsp&nbsp user interfaces<br />
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            user experiences<br />
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            graphic design<br />
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            communication design<br />
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            interactive experiences<br />
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <strong>front-end development</strong><br />
+            as right as the<br />
+            mind and heart allows for.<br />
+          </p>
+
+          <p>krystal & bahl is a human creative.</p>
+        </div>
       </section>
 
-      <section id="about">
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
+      <section id="works">
+        <p>works</p>
+        <p>works</p>
+        <p>works</p>
       </section>
 
       <section id="record">
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
+        <p>record</p>
+        <p>record</p>
+        <p>record</p>
       </section>
 
-      <section id="record">
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
+      <section id="contact">
+        <p>contact</p>
+        <p>contact</p>
+        <p>contact</p>
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="background">
+      <p>footer</p>
+    </footer>
 
     <script src="/assets/js/rotate.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script>
+      const lenis = new Lenis();
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
   </body>
 </html>
