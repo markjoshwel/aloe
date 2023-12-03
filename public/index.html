@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Krystall & Bahl</title>
 
-    <!-- <link rel="stylesheet" href="assets/css/prototyping.css" /> -->
+    <link rel="stylesheet" href="assets/css/prototyping.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="background">
@@ -18,9 +18,6 @@
           </li>
           <li>
             <p><a href="#works">works</a></p>
-          </li>
-          <li>
-            <p><a href="#record">record</a></p>
           </li>
           <li>
             <p><a href="#contact">contact</a></p>
@@ -155,23 +152,59 @@
 
         <div id="works-container">
           <section class="work">
-            <h3 class="work-title">sandplus</h3>
+            <div class="work-title">
+              <h3>sandplus / s&+</h3>
+            </div>
+
             <p class="work-writeup">
-              Figma wireframe project for a student-made application project.
+              Figma UI/UX wireframe project for a student-made application
+              project.
             </p>
+
             <div class="work-images">
-              <!-- ... -->
+              <video autoplay muted loop playsinline>
+                <source
+                  src="assets/mp4/demo-sandplus.mp4"
+                  alt="Video demonstration of sandplus's Figma prototype"
+                  type="video/mp4"
+                />
+              </video>
             </div>
           </section>
 
           <section class="work">
-            <h3 class="work-title">mStudent 5</h3>
+            <div class="work-title">
+              <h3>mStudent Redesign</h3>
+            </div>
+
             <p class="work-writeup">
-              Figma wireframe project for the revamp of Ngee Ann Polytechnics'
-              student-facing portal.
+              Figma UI/UX wireframe project for the revamp of Ngee Ann
+              Polytechnics' student-facing portal.
             </p>
-            <div class="work-images">
-              <!-- ... -->
+
+            <div class="work-images space-x-8 overflow-scroll">
+              <video autoplay muted loop playsinline>
+                <source
+                  src="assets/mp4/demo-mstudent.mp4"
+                  alt="Video demonstration of mStudents's Figma prototype"
+                  type="video/mp4"
+                />
+              </video>
+              <img
+                loading="lazy"
+                src="assets/webp/demo-mstudent-1.webp"
+                alt="Login and homescreen of the mStudent Redesign."
+              />
+              <img
+                loading="lazy"
+                src="assets/webp/demo-mstudent-2.webp"
+                alt="Enrollment overview, Leave of Absence Submission and Timetable Pages of the mStudent Redesign."
+              />
+              <img
+                loading="lazy"
+                src="assets/webp/demo-mstudent-3.webp"
+                alt="Low fidelity wireframes of the the mStudent Redesign."
+              />
             </div>
           </section>
         </div>
@@ -198,6 +231,8 @@
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
     <script>
+      // smooth scrolling
+      // https://github.com/studio-freight/lenis#setup
       const lenis = new Lenis();
 
       function raf(time) {
@@ -207,6 +242,7 @@
 
       requestAnimationFrame(raf);
 
+      // smooth jumping
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -217,6 +253,7 @@
         });
       });
 
+      // header background text "circularisation"
       const text = document.querySelector("#description-text p");
       text.innerHTML = text.innerText
         .split("")
