@@ -355,7 +355,6 @@ h2 {
 
 .work-images {
   margin-top: 2rem;
-  height: 50vh;
   max-height: 50vh;
   width: 100%;
 
@@ -364,13 +363,26 @@ h2 {
   overflow-x: scroll;
 }
 
+@media (max-width: 800px) {
+  .work-images {
+    max-height: 42vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .work-images {
+    max-height: 35vh;
+  }
+}
+
 .work-images > * {
   flex-shrink: 0;
   height: 100%;
   border-radius: 1rem;
 }
 
-.work-images img, .work-images video {
+.work-images img,
+.work-images video {
   max-width: initial !important;
 }
 
