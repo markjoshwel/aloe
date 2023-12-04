@@ -357,6 +357,7 @@ h2 {
   margin-top: 2rem;
   height: 50vh;
   max-height: 50vh;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
@@ -364,9 +365,13 @@ h2 {
 }
 
 .work-images > * {
-  min-width: min-content;
+  flex-shrink: 0;
   height: 100%;
   border-radius: 1rem;
+}
+
+.work-images img, .work-images video {
+  max-width: initial !important;
 }
 
 .work-images > :not([hidden]) ~ :not([hidden]) {
