@@ -33,6 +33,9 @@ Prototype: [`src/wireframe.xd`](src/wireframe.xd)
 
 ## Features
 
+- Sticky Universal Navigation Menu  
+  This allows the user to navigate the website easily at any point in the page.
+
 - Fully Responsive to Breakpoints Until ~350px  
   This supports the majority of mobile devices, including the iPhone SE.
 
