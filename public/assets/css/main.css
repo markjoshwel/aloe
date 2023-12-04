@@ -138,8 +138,6 @@ h2 {
 }
 
 #hero-foreground h1 {
-  /* logo */
-  /* color: #f99229; */
   line-height: 0.96;
   font-size: 13rem;
   place-self: end;
@@ -192,8 +190,6 @@ h2 {
   background-image: url("../webp/hero.webp");
   background-size: cover;
   background-position: center;
-  /* background-repeat: no-repeat;
-  background-attachment: fixed; */
 
   display: flex;
   justify-content: center;
@@ -346,7 +342,7 @@ h2 {
 .work-writeup {
   min-width: 50%;
   max-width: 50%;
-  padding-right: 20%
+  padding-right: 20%;
 }
 
 @media (max-width: 800px) {
@@ -358,29 +354,30 @@ h2 {
 }
 
 .work-images {
+  margin-top: 2rem;
+  max-height: 70vh;
+
   display: flex;
   flex-direction: row;
-  overflow: scroll;
-
-  margin-top: 2rem;
-  width: max-content;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 .work-images > * {
-  height: 30rem;
+  min-width: min-content;
+  height: 100%;
   border-radius: 1rem;
 }
 
 .work-images > :not([hidden]) ~ :not([hidden]) {
-  margin-right: calc(1rem/* 32px */ * 0);
-  margin-left: calc(1rem/* 32px */ * 1);
+  margin-right: calc(1rem * 0);
+  margin-left: calc(1rem * 1);
 }
 
 /* contact section styling */
 
 #contact {
   padding: 2rem;
+  padding-top: 2.5rem;
 }
 
 #contact h2 {
@@ -403,12 +400,12 @@ h2 {
 
 #contact-card svg {
   height: 70vh;
-  /* max-height: 100%; */
+  max-width: 60vw;
   object-fit: contain;
 }
 
 #contact-text {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
