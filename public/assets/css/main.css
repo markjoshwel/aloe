@@ -355,7 +355,8 @@ h2 {
 
 .work-images {
   margin-top: 2rem;
-  max-height: 70vh;
+  height: 50vh;
+  max-height: 50vh;
 
   display: flex;
   flex-direction: row;
